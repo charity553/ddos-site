@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - DDoS Simulation Toolkit</title>
+  <link rel="stylesheet" href="css/about.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-image"></div>
+  <div class="overlay"></div>
+
+  <main class="content">
+
+    <section class="section glass fade-up delay-1">
+      <h2>Who We Are</h2>
+      <p>
+        The <strong class="highlight">DDoS Simulation Toolkit</strong> is a one-stop destination for comprehensive tools and resources
+        designed to combat the growing threat of Distributed Denial of Service (DDoS) attacks. Our focus on innovation
+        and accessibility ensures that IT professionals, e-commerce business owners, and clients have access to the best
+        simulation solutions to fortify their systems against potential threats.
+      </p>
+    </section>
+
+    <section class="section glass fade-up delay-2">
+      <h2>Why Choose Us</h2>
+      <p>
+        At <strong class="highlight">DDoS Simulation Toolkit</strong>, we are committed to simplifying the process of testing systems against DDoS
+        attacks. Our user-friendly toolkit and expert guidance make it effortless for organizations to strengthen their
+        defenses and understand their systems' responses under stress.
+      </p>
+    </section>
+
+    <section class="section glass fade-up delay-3">
+      <h2>Our Commitment</h2>
+      <p>
+        <strong class="highlight">Enhancing Security and Preparedness:</strong> Our commitment at DDoS Simulation Toolkit is to enhance security
+        measures and preparedness against DDoS attacks. We strive to provide top-notch simulation tools, educational
+        resources, and expert assistance to empower organizations in fortifying their systems and mitigating the impact
+        of potential DDoS threats — making security simulations accessible to all.
+      </p>
+    </section>
+  </main>
+
+  <!-- Global Navigation (Bottom of Page) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">DDoS Toolkit</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="problem.html">Problem</a></li>
+        <li><a href="solution.html">Solution</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    // Scroll-based animation
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

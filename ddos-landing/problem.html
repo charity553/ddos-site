@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Problem - DDoS Simulation Toolkit</title>
+  <link rel="stylesheet" href="css/problem.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+  <div class="background-image"></div>
+  <div class="overlay"></div>
+
+  <main class="content">
+    <section class="problem-section fade-up">
+      <div class="icon-header">
+        <i data-lucide="shield-alert" class="lucide-icon"></i>
+        <h2>Problem Statement</h2>
+      </div>
+      <p>
+        <strong>“How can we prepare our servers or websites to survive a traffic attack?”</strong><br /><br />
+        With the growing reliance on digital services, Kenya and other countries face increasing cyber threats —
+        especially DDoS attacks. Cybersecurity education is largely theoretical, with few practical tools for
+        real-world safe simulations. This project closes that gap.
+      </p>
+    </section>
+  </main>
+
+  <!-- Global Navigation (Bottom of Page) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">DDoS Toolkit</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="problem.html">Problem</a></li>
+        <li><a href="solution.html">Solution</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    // Load Lucide icons
+    lucide.createIcons();
+
+    // Animate on scroll
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meet the Team</title>
+  <link rel="stylesheet" href="css/team.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-image"></div>
+  <div class="overlay"></div>
+
+  <main class="content">
+    <h1 class="page-title fade-up">Meet the Team</h1>
+
+    <div class="team-grid fade-up">
+      <div class="card">
+        <img src="assets/team/Serah.jpg" alt="Serah Maina" />
+        <div class="card-content">
+          <h2>Serah Maina</h2>
+          <p class="role">Project Lead</p>
+          <p class="skills">Python, Flask, Monitoring, Dash</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/team/charity.jpg" alt="Charity Mulei" />
+        <div class="card-content">
+          <h2>Charity Mulei</h2>
+          <p class="role">Monitoring & Testing</p>
+          <p class="skills">psutil, Testing, Documentation</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/team/Valentine.jpg" alt="Valentine Momanyi" />
+        <div class="card-content">
+          <h2>Valentine Momanyi</h2>
+          <p class="role">Data Visualization</p>
+          <p class="skills">Dash/Streamlit, UI/UX, Python</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Navigation (Bottom of Page) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">DDoS Toolkit</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="problem.html">Problem</a></li>
+        <li><a href="solution.html">Solution</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

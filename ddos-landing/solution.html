@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solution - DDoS Simulation Toolkit</title>
+  <link rel="stylesheet" href="css/solution.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+  <div class="background-image"></div>
+  <div class="overlay"></div>
+
+  <main class="content">
+    <h1 class="page-title fade-up">Solution</h1>
+
+    <!-- Overview Section -->
+    <section class="section-card fade-up">
+      <div class="icon-header">
+        <i data-lucide="shield-check" class="lucide-icon"></i>
+        <h2>Proposed Solution</h2>
+      </div>
+      <p>
+        This project proposes a <strong>Python-based DDoS simulation toolkit</strong> designed for educational and research purposes.
+        Instead of deploying real attacks, the system simulates DDoS behavior — such as traffic floods and resource
+        stress — in a safe, controlled environment. This empowers cybersecurity trainers and small businesses to
+        better understand how DDoS attacks work and how to defend against them.
+      </p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="fade-up">
+      <h2 class="features-title">Core Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <i data-lucide="network" class="feature-icon"></i>
+          <h3>Traffic Simulation</h3>
+          <p>Simulates flooding attacks by sending numerous requests to test server resilience.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="book-open" class="feature-icon"></i>
+          <h3>Real-Time Dashboards</h3>
+          <p>Provides dashboards, logs, and reports for teaching DDoS concepts ethically.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="shield-check" class="feature-icon"></i>
+          <h3>Synthetic Logs</h3>
+          <p>Enables detailed post-attack analysis and improvement.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Navigation (Bottom of Page) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">DDoS Toolkit</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="problem.html">Problem</a></li>
+        <li><a href="solution.html">Solution</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    lucide.createIcons();
+
+    // Scroll-based animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
